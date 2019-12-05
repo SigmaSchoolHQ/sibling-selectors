@@ -1,0 +1,9 @@
+/* child */
+.child > p {
+	color: magenta;
+}
+
+/* descendant */
+.descendant div p {
+	color: magenta;
+}

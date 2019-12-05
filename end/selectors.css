@@ -1,0 +1,23 @@
+/* child */
+.child > p {
+	color: magenta;
+}
+
+/* descendant */
+.descendant div p {
+	color: magenta;
+}
+
+/* Adjacent siblings */
+.adjacent-sibling div + p {
+	color: magenta;
+}
+
+/* General siblings */
+.general-sibling p ~ p {
+	color: magenta;
+}
+
+/* .container > h1 ~ section {
+	border: 1px solid #333;
+} */

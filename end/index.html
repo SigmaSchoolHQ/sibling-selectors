@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sibling Selectors</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="selectors.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sibling Selectors</h1>
+
+    <section class='last-time'>
+      <h2>Previously we looked at basic selectors...</h2>
+      <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">Type/Element selector:
+            <code> h2 { ... }</code></a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID selector:
+            <code> #id { ... }</code> </a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">Class selector:
+            <code> .class { ... }</code></a></li>
+      </ul>
+    </section>
+
+    <h2>Then last time we looked at child & descendant selectors</h2>
+    <!-- child -->
+    <section class="child">
+      <h2>Child Selector 👉 &gt;</h2>
+      <div class="nested">
+        <code>.child > p</code>
+        <p class="nested-again">Will not select this paragraph which is nested within a div. Using <code>.child p</code>
+          Would select paragraph.</p>
+      </div>
+      <p>It will only select paragraphs like this one.</p>
+      <p>And like this one! The are direct children of the section element with the .child class. Any paragraphs nested
+        within another containing element will be descendants rather than children.</p>
+    </section>
+
+    <!-- descendant -->
+    <section class="descendant">
+      <h2>Descendant Selector</h2>
+      <code>.descendant p</code>
+      <p>Select all paragraphs found inside of this .descendant section.</p>
+      <div>
+        <p>Even this one which is nested in a div.</p>
+      </div>
+      <span>👆Both of these are descendants of the .descendant section 👆</span>
+      <div>
+        <div>
+          <div>
+            <div>
+              <div>
+                <p>Even this paragraph is selected despite being nested within 5 divs. Check the code!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- adjacent sibling -->
+    <section class="adjacent-sibling">
+      <h2>Adjacent sibling 👉 &plus;</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <div>Hello I am a div</div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+    </section>
+
+    <!-- general sibling -->
+    <section class="general-sibling">
+      <h2>General Sibling 👉 ~ </h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <div>Hello I am a div</div>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero, nisi?</p>
+    </section>
+  </div>
+</body>
+
+</html>
