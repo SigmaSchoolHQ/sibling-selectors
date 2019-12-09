@@ -1,13 +1,3 @@
-/* child */
-.child > p {
-	color: magenta;
-}
-
-/* descendant */
-.descendant div p {
-	color: magenta;
-}
-
 /* Adjacent siblings */
 .adjacent-sibling div + p {
 	color: magenta;
